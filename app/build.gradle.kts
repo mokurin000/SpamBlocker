@@ -19,7 +19,9 @@ android {
             enableV3Signing = true
 
             storeFile = file("../../keystore.jks")
+	    storeType = "pkcs12"
             storePassword = System.getenv("ANDROID_KEYSTORE_PASSWORD")
+
             keyPassword = System.getenv("ANDROID_KEY_PASSWORD")
             keyAlias = System.getenv("ANDROID_KEY_ALIAS")
         }
