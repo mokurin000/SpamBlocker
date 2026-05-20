@@ -126,7 +126,7 @@ fun String.regexMatchesNumber(rawNumber: String, regexFlags: Int): Boolean {
 
     val opts = Util.flagsToRegexOptions(regexFlags)
     return try {
-        this.toRegex(opts).matches(num)
+        this.toRegex(opts).containsMatchIn(num)
     } catch (_: Exception) {
         false
     }
